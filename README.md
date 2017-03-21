@@ -21,6 +21,6 @@ composer install
 
 # Client
 
-yarn
+yarn # or npm install
 npm run build
 ```

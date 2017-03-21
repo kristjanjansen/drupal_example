@@ -2,12 +2,12 @@
   "name": "drupal_client",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=production webpack --progress --hide-modules --watch",
+    "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --watch",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "axios": "^0.15.3",
     "date-fns": "^1.28.1",
+    "devour-client": "^1.4.1",
     "postcss-font-magician": "^1.6.1",
     "vue": "^2.2.1",
     "vue-router": "^2.3.0"
