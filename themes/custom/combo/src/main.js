@@ -1,9 +1,7 @@
 import Vue from 'vue'
 
-import axios from 'axios';
-
-var http = axios.create();
-Vue.prototype.$http = http
+import api from './api';
+Vue.prototype.$api = api
 
 import VueRouter from 'vue-router'
 import router from './router';

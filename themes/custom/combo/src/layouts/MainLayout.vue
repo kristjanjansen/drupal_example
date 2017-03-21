@@ -18,10 +18,14 @@
         line-height: 1.5em;
         display: flex;
         justify-content: center;
+        color: #222;
     }
     h1, h2, h3, h4 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
+        color: #444;
+        margin-bottom: 0;
+        padding: 0;
     }
     h1 {
         text-transform: uppercase;
@@ -33,13 +37,12 @@
         margin-top: 1em;
     }
     h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
     a {
         color: #444;
         text-decoration: none;
     }
-
     .content {
         width: 50vw;
     }

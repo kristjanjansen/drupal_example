@@ -2,14 +2,14 @@
 
     <main-layout>
         <div slot="content">
-            <article-row
+            <article-component
                 v-for="article in articles"
                 :key="article.id"
                 :title="article.attributes.title"
-                :body="article.attributes.body.value.slice(0, 200)+'...'"
+                :body="article.attributes.body.summary"
                 :link="'/article/' + article.id"
             >
-            </article-row>
+            </article-component>
         </div>
     </main-layout>
 
@@ -17,27 +17,16 @@
 
 <script>
 
-    import format from 'date-fns/format'
-
     import MainLayout from '../layouts/MainLayout.vue'
-    import ArticleRow from '../components/ArticleRow.vue'
+    import ArticleComponent from '../components/ArticleComponent.vue'
 
     export default {
-        name: 'App',
-        components: { MainLayout, ArticleRow },
-        data: () => ({ articles: []}),
+        components: { MainLayout, ArticleComponent },
+        data: () => ({ articles: [] }),
         mounted() {
-            this.$http.get('/jsonapi/node/article?page[limit]=10')
-                .then(res => {
-                    this.articles = res.data.data.map(article => {
-                        article.attributes.created
-                            = format(
-                                new Date(article.attributes.created * 1000),
-                                'D. MMMM YYYY H:mm'
-                            )
-                        return article
-                    })
-                })
+            this.$api.findAll('node--article', {
+                page: { limit: 10 }
+            }).then(res => this.articles = res)
         }
     }
 

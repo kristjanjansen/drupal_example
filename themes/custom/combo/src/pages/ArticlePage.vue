@@ -2,11 +2,11 @@
 
     <main-layout>
         <div slot="content">
-            <article-row
+            <article-component
                 :title="article.attributes.title"
-                :body="article.attributes.body.value.replace(/\n/g, '<br>')"
+                :body="article.attributes.body.value"
             >
-            </article-row>
+            </article-component>
         </div>
     </main-layout>
 
@@ -15,21 +15,18 @@
 <script>
 
     import MainLayout from '../layouts/MainLayout.vue'
-    import ArticleRow from '../components/ArticleRow.vue'
+    import ArticleComponent from '../components/ArticleComponent.vue'
 
     export default {
+        components: { MainLayout, ArticleComponent },
         data: () => ({ article: {
             attributes: {
                 body: {}
             }
         }}),
-        components: { MainLayout, ArticleRow },
         mounted() {
-            this.$http.get('/jsonapi/node/article/' + this.$route.params.id)
-                .then(res => {
-                    this.article = res.data.data
-                })
-            
+            this.$api.find('node--article', this.$route.params.id)
+                .then(res => this.article = res)
         }
     }
 
