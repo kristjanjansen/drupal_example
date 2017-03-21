@@ -1,6 +1,15 @@
+## Requirements
+
+* LAMP stack (Laragon on Windows or Laravel Valet on OSX)
+* Composer
+* NodeJS and Yarn 
+
 ## Installation
 
 ```sh
+
+# Server
+
 git clone https://github.com/kristjanjansen/drupal_server
 cd drupal
 composer install
@@ -9,7 +18,7 @@ composer install
 ./vendor/bin/drupal create:nodes article --limit=10 --title-words=5 --time-range=now
 ./vendor/bin/drupal theme:install combo --set-default
 
-# And now the frontend part
+# Client
 
 yarn
 npm run build
