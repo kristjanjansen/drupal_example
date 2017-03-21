@@ -1,0 +1,5 @@
+name: combo
+type: module
+description: combo
+core: 8.x
+package: Custom

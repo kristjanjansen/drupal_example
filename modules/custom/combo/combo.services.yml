@@ -1,0 +1,6 @@
+services:
+  combo.route_subscriber:
+    class: Drupal\combo\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+
