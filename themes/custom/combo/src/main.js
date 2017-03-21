@@ -12,7 +12,7 @@ const routes = [
   { path: '/article/:id', component: ArticlePage },
 ]
 
-const router = new VueRouter({ routes })
+const router = new VueRouter({ routes, mode: 'history' })
 
 var http = axios.create();
 

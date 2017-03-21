@@ -1,10 +1,7 @@
 name: combo
 type: theme
-description: My Awesome theme
+description: combo
 package: Other
 core: 8.x
-libraries:
-  - combo/global-styling
-
 base theme: false
 
