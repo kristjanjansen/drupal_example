@@ -18,6 +18,7 @@ composer install
 ./vendor/bin/drupal module:install combo
 ./vendor/bin/drupal theme:install combo --set-default
 ./vendor/bin/drupal create:nodes article --limit=10 --title-words=5 --time-range=now
+./vendor/bin/drupal create:nodes page --limit=3 --title-words=1 --time-range=now
 
 # Client
 

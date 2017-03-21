@@ -3,7 +3,6 @@
     <div>
         <router-link :to="link">
             <h2>{{ title }}</h2>
-            <p>{{ date }}</p>
         </router-link>
         <div v-html="body"></div>
     </div>
