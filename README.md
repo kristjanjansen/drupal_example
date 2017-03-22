@@ -6,6 +6,7 @@
 
 * LAMP stack ([Laragon](https://laragon.org/) on Windows or [Laravel Valet](https://laravel.com/docs/valet) on OSX)
 * Composer
+* Git
 * NodeJS and optionally [Yarn](https://yarnpkg.com/en/docs/install) 
 
 ### Installation
@@ -28,4 +29,8 @@ composer install
 
 yarn # or npm install
 npm run build
+
+# If you have Valet installed then
+
+valet open
 ```
