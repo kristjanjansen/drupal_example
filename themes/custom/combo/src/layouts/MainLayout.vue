@@ -1,85 +1,52 @@
 <template>
 
-    <div class="main-layout">
-        <header>
-        <h1><router-link to="/">Sitename</router-link></h1>
-            <nav>
-                <router-link
-                    v-for="page in pages"
-                    :key="page.id"
-                    :to="'/page/' + page.id"
-                >{{ page.attributes.title }}
-                </router-link>
-            </nav>
-        </header>
-        <slot name="content"></slot>
+    <div class="container">
+        <header-component></header-component>
+        <main>
+            <slot name="content"></slot>
+        </main>
+        <footer-component></footer-component>
     </div>
 
 </template>
 
 <script>
 
-    import MainLayout from '../layouts/MainLayout.vue'
-    import ArticleComponent from '../components/ArticleComponent.vue'
+    import HeaderComponent from '../components/HeaderComponent.vue'
+    import FooterComponent from '../components/FooterComponent.vue'
 
     export default {
-        components: { MainLayout, ArticleComponent },
-        data: () => ({ pages: [] }),
-        mounted() {
-            this.$api.findAll('node--page', {
-                page: { limit: 3 }
-            })
-            .then(res => this.pages = res)
-        }
+        components: { HeaderComponent, FooterComponent }
     }
 
 </script>
 
 <style>
-    * {
-        color: #222;
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      color: black;
+      box-sizing: border-box;
+      list-style: none;
+      font-weight: normal;
     }
     body {
-        font-family: 'Muli', sans-serif;
-        font-size: 18px;
-        margin: 0;
-        padding: 2rem;
-        line-height: 1.5em;
         display: flex;
         justify-content: center;
     }
-    h1 {
-        font-family: 'Muli', sans-serif;
-        text-transform: uppercase;
-        font-weight: 400;
-        font-size: 28px;
-        margin: 0
-    }
-    h2 {
-        font-family: 'Ovo', sans-serif;
-        font-size: 26px;
-        margin: 1em 0 0.5em 0;
-        color: #444;
-    }
-    a {
-        text-decoration: none;
-    }
-    p {
-        margin-bottom: 1em;
-    }
-    .main-layout {
+
+</style>
+
+<style scoped>
+
+    .container {
         width: 50vw;
-    }
-    header {
-        display: flex;
-        justify-content: space-between;
         margin-top: 1.5em;
         margin-bottom: 7em;
     }
-    nav > a {
-        padding: 0.25em;
-    }
-    nav > .router-link-active {
-        border-bottom: 1.5px solid #333;
-    }
+
 </style>
