@@ -46,7 +46,7 @@
     .container {
         width: 50vw;
         margin-top: 1.5em;
-        margin-bottom: 7em;
+        margin-bottom: 5em;
     }
 
 </style>

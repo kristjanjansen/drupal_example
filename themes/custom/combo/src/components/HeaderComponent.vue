@@ -37,7 +37,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 7em;
+        height: 9em;
     }
     .title {
         font-family: 'Muli', sans-serif;

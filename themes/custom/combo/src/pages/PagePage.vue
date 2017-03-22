@@ -18,13 +18,14 @@
 
     export default {
         components: { MainLayout, ArticleComponent },
+        props: ['id'],
         data: () => ({ page: {
             attributes: {
                 body: {}
             }
         }}),
         mounted() {
-            this.$api.find('node--page', this.$route.params.id)
+            this.$api.find('node--page', this.id)
                 .then(res => this.page = res)
         }
     }
