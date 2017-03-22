@@ -1,10 +1,14 @@
-## Requirements
+![](screenshot.png)
 
-* LAMP stack (Laragon on Windows or Laravel Valet on OSX)
+## A modern Drupal 8 development stack
+
+### Requirements
+
+* LAMP stack ([Laragon](https://laragon.org/) on Windows or [Laravel Valet](https://laravel.com/docs/valet) on OSX)
 * Composer
-* NodeJS and Yarn 
+* NodeJS and optionally [Yarn](https://yarnpkg.com/en/docs/install) 
 
-## Installation
+### Installation
 
 ```sh
 
