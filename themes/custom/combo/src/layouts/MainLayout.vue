@@ -3,14 +3,14 @@
     <div class="main-layout">
         <header>
         <h1><router-link to="/">Sitename</router-link></h1>
-        <nav>
-        <router-link
-            v-for="page in pages"
-            :key="page.id"
-            :to="'/page/' + page.id"
-        >{{ page.attributes.title }}
-        </router-link>
-        </nav>
+            <nav>
+                <router-link
+                    v-for="page in pages"
+                    :key="page.id"
+                    :to="'/page/' + page.id"
+                >{{ page.attributes.title }}
+                </router-link>
+            </nav>
         </header>
         <slot name="content"></slot>
     </div>
