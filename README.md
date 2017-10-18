@@ -19,6 +19,7 @@ git clone https://github.com/kristjanjansen/drupal_combo drupal
 cd drupal
 composer install
 ./vendor/bin/drupal site:install -n --db-name=drupal --db-user=root --site-name=drupal --site-mail=drupal@drupal.com --account-name=drupal --account-mail=drupal@drupal.com --account-pass=drupal --force standard
+./vendor/bin/drush config-import --partial --source="config/sync/" -y
 ./vendor/bin/drupal module:install jsonapi
 ./vendor/bin/drupal module:install combo
 ./vendor/bin/drupal theme:install combo --set-default
@@ -33,4 +34,8 @@ npm run build
 # If you have Valet installed then
 
 valet open
+```
+
+```sh
+# ./vendor/bin/drupal config:export:single --name=user.role.anonymous --remove-uuid --remove-config-hash --directory="config/sync"
 ```
