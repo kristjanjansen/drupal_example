@@ -24,7 +24,7 @@ export default {
     `,
     props: ['uuid'],
     data: () => ({ article: { uid: {}, body: {} }, comments: []}),
-    created() {
+    mounted() {
         getArticleWithComments(this.uuid).then(article => {
             this.article = article
             this.comments = article.comments

@@ -1,8 +1,25 @@
 import Frontpage from './pages/Frontpage.js'
 import Articlepage from './pages/Articlepage.js'
 import Userpage from './pages/Userpage.js'
-//import Userpage from './pages/Userpage.js'
 
+const routes = {
+    '/': Frontpage,
+    '/article': Articlepage,
+    '/user': Userpage,       
+}
+
+const route = window.location.pathname.split('/')
+
+new Vue({
+    el: '#app',
+    render(h) {
+        return h(routes['/'+route[1]], {
+            props: { uuid: route[2] }
+        })
+    }
+})
+
+/*
 new Vue({
     el: '#app',
     components: { Userpage },
@@ -10,7 +27,7 @@ new Vue({
         <userpage uuid="41ea5ed7-5421-4e3a-9bf6-df3889c998c4"></userpage>
     `
 })
-
+*/
 /*
 
         <articlepage uuid="73942b4f-41e2-4877-bb67-f3dbf28eb714"></articlepage>

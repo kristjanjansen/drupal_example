@@ -11,7 +11,7 @@ const routes = {
 const route = window.location.pathname.split('/')
 
 const render = async () => {
-    const html = await routes[`/${route[1]}`](route[2])
+    const html = await routes['/'+route[1]](route[2])
     document.querySelector('#app').innerHTML = html
 }
 
