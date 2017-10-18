@@ -2,12 +2,14 @@ import { formatDate } from '../utils.js'
 
 export default article => `
     <article>
-        <h2>${article.title}</h2>
+        <a href="/article/${article.uuid}">
+            <h2>${article.title}</h2>
+        </a>
         <h4>
             Created by
             <a href="/user/${article.uid.id}">${article.uid.name}</a>
             ${formatDate(article.created)}
         </h4>
-        <p>${article.body.value.replace(/\n\n/g, '</p><p>')}</p>
+        <p>${article.body.summary.slice(0, 200)}...</p>
     </article>
 `

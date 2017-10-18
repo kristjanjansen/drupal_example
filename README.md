@@ -40,4 +40,10 @@ valet open
 
 ```sh
 # ./vendor/bin/drupal config:export:single --name=user.role.anonymous --remove-uuid --remove-config-hash --directory="config/sync"
+
+# Downsides
+
+accessibility
+translations / t
+formatters
 ```

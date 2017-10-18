@@ -10,7 +10,7 @@ const api = axios.create({
     
 export async function getArticles(limit = 10) {
     const params = {
-        'include': 'field_image',
+        'include': 'field_image,uid',
         'page[limit]': limit
     }
     const res = await api.get('node/article', { params })
@@ -19,7 +19,7 @@ export async function getArticles(limit = 10) {
 
 export async function getArticle(uuid) {
     const params = {
-        'include': 'field_image',
+        'include': 'field_image,uid',
     }
     const res = await api.get(`node/article/${uuid}`, { params })
     return jsonapi.parse(res.data).data
@@ -38,4 +38,12 @@ export async function getArticleWithComments(uuid) {
     const article = await getArticle(uuid)
     const comments = await getArticleComments(uuid)
     return {...article, comments} 
+}
+
+export async function getUser(uuid) {
+    const params = {
+        'include': 'user_picture',
+    }
+    const res = await api.get(`user/user/${uuid}`, { params })
+    return jsonapi.parse(res.data).data
 }
