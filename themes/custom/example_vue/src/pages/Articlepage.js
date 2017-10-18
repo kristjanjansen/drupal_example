@@ -1,24 +1,24 @@
 import { getArticleWithComments } from '../api.js'
 
-import Headr from '../components/Headr.js'
-import Articl from '../components/Articl.js'
+import Header2 from '../components/Header2.js'
+import Article2 from '../components/Article2.js'
 import Comment from '../components/Comment.js'
 
 export default {
-    components: { Headr, Articl, Comment },
+    components: { Header2, Article2, Comment },
     template: `
         <div>
-            <headr></headr>
+            <header2></header2>
             <main>
-            <articl :article="article"></articl>
-            <aside>
-                <h3>Comments</h3>
-                <comment
-                    v-for="comment in comments"
-                    key="comment"
-                    :comment="comment"
-                ></comment>
-            </aside>
+                <article2 :article="article"></article2>
+                <aside>
+                    <h3>Comments</h3>
+                    <comment
+                        v-for="comment in comments"
+                        key="comment"
+                        :comment="comment"
+                    ></comment>
+                </aside>
             </main>
         </div>
     `,

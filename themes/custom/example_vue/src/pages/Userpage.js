@@ -1,12 +1,12 @@
 import { getUser } from '../api.js'
 
-import Headr from '../components/Headr.js'
+import Header2 from '../components/Header2.js'
 
 export default {
-    components: { Headr },
+    components: { Header2 },
     template: `
         <div>
-            <headr></headr>
+            <header2></header2>
             <main>
                 <h2>{{user.name}}</h2>
                 <pre>{{ user }}</pre>

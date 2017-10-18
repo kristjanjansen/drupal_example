@@ -1,13 +1,13 @@
 import { getArticles } from '../api.js'
 
-import Headr from '../components/Headr.js'
+import Header2 from '../components/Header2.js'
 import ArticleSummary from '../components/ArticleSummary.js'
 
 export default {
-    components: { Headr, ArticleSummary },
+    components: { Header2, ArticleSummary },
     template: `
         <div>
-            <headr></headr>
+            <header2></header2>
             <main>
                 <article-summary
                     v-for="article in articles"
