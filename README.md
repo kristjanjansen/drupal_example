@@ -23,8 +23,10 @@ composer install
 ./vendor/bin/drupal module:install jsonapi
 ./vendor/bin/drupal module:install combo
 ./vendor/bin/drupal theme:install combo --set-default
-./vendor/bin/drupal create:nodes article --limit=10 --title-words=5 --time-range=now
-./vendor/bin/drupal create:nodes page --limit=3 --title-words=1 --time-range=now
+./vendor/bin/drupal create:nodes article --limit=3 --title-words=1 --time-range=5
+./vendor/bin/drupal create:comments 1 --limit=3 --title-words=1 --time-range=5
+./vendor/bin/drupal create:comments 2 --limit=3 --title-words=1 --time-range=5
+./vendor/bin/drupal create:comments 3 --limit=3 --title-words=1 --time-range=5
 
 # Client
 
