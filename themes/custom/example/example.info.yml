@@ -1,0 +1,7 @@
+name: example
+type: theme
+description: example
+package: Other
+core: 8.x
+base theme: false
+

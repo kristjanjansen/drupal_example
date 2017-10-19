@@ -1,0 +1,7 @@
+name: example_vue
+type: theme
+description: example_vue
+package: Other
+core: 8.x
+base theme: false
+
