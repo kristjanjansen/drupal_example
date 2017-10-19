@@ -1,4 +1,4 @@
-import { formatDate } from '../utils.js'
+import { formatDate, formatSummary } from '../formatters.js'
 
 export default article => `
     <article>
@@ -10,6 +10,6 @@ export default article => `
             <a href="/user/${article.uid.id}">${article.uid.name}</a>
             ${formatDate(article.created)}
         </h4>
-        <p>${article.body.summary.slice(0, 200)}...</p>
+        <p>${formatSummary(article.body.summary)}</p>
     </article>
 `

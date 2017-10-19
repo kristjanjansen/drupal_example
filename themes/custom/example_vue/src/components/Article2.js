@@ -1,4 +1,4 @@
-import * as formatters from '../utils.js'
+import * as formatters from '../formatters.js'
 
 export default {
     props: ['article'],
@@ -11,7 +11,8 @@ export default {
                 <a :href="'/user/'+article.uid.id">{{article.uid.name}}</a>
                 {{formatDate(article.created)}}
             </h4>
-            <p>{{article.body.value}}</p>
+            <img :src="article.field_image.url">
+            <div v-html="formatBody(article.body.value)"></div>
         </article>
     `
 }

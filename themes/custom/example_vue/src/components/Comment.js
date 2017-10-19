@@ -1,4 +1,4 @@
-import * as formatters from '../utils.js'
+import * as formatters from '../formatters.js'
 
 export default {
     props: ['comment'],
@@ -10,7 +10,7 @@ export default {
                 <a :href="'/user/'+comment.uid.id">{{comment.uid.name}}</a>
                 {{formatDate(comment.created)}}
             </h4>
-            <p>{{comment.comment_body.value}}</p>
+            <div v-html="formatBody(comment.comment_body.value)"></div>
         </div>
     `
 }

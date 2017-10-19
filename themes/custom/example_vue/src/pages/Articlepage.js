@@ -23,7 +23,7 @@ export default {
         </div>
     `,
     props: ['uuid'],
-    data: () => ({ article: { uid: {}, body: {} }, comments: []}),
+    data: () => ({ article: { uid: {}, body: { value: ''} }, comments: []}),
     mounted() {
         getArticleWithComments(this.uuid).then(article => {
             this.article = article

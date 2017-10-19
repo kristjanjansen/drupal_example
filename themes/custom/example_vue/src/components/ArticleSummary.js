@@ -1,4 +1,4 @@
-import * as formatters from '../utils.js'
+import * as formatters from '../formatters.js'
 
 export default {
     props: ['article'],
@@ -10,10 +10,10 @@ export default {
             </a>
             <h4>
                 Created by
-                <a :href="'/user/'+article.uid.id">{{article.uid.name}}</a>
-                {{formatDate(article.created)}}
+                <a :href="'/user/'+article.uid.id">{{ article.uid.name }}</a>
+                {{ formatDate(article.created) }}
             </h4>
-            <p>{{article.body.summary.slice(0, 200)}}</p>
+            <p>{{ formatSummary(article.body.summary) }}</p>
         </article>
     `
 }

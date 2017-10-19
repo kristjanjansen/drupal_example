@@ -1,4 +1,4 @@
-import { formatDate } from '../utils.js'
+import { formatDate, formatBody } from '../formatters.js'
 
 export default article => `
     <article>
@@ -8,6 +8,7 @@ export default article => `
             <a href="/user/${article.uid.id}">${article.uid.name}</a>
             ${formatDate(article.created)}
         </h4>
-        <p>${article.body.value.replace(/\n\n/g, '</p><p>')}</p>
+        <img src="${article.field_image.url}">
+        <p>${formatBody(article.body.value)}</p>
     </article>
 `

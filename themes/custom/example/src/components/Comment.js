@@ -1,4 +1,4 @@
-import { formatDate } from '../utils.js'
+import { formatDate, formatBody } from '../formatters.js'
 
 export default comment => `
     <div>
@@ -7,6 +7,6 @@ export default comment => `
         <a href="/user/${comment.uid.id}">${comment.uid.name}</a>
         ${formatDate(comment.created)}
     </h4>
-    <p>${comment.comment_body.value.replace(/\n\n/g, '</p><p>')}</p>
+    ${formatBody(comment.comment_body.value)}</p>
     </div>
 `
