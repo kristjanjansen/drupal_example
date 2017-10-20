@@ -1,0 +1,7 @@
+name: example_react
+type: theme
+description: example_react
+package: Other
+core: 8.x
+base theme: false
+
