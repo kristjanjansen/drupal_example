@@ -1,6 +1,6 @@
-name: example
+name: example_js2
 type: theme
-description: example
+description: example_js2
 package: Other
 core: 8.x
 base theme: false

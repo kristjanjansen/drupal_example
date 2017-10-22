@@ -1,5 +1,5 @@
 const api = axios.create({
-    baseURL: 'http://drupal_combo.dev/jsonapi/',
+    baseURL: '/jsonapi/',
     headers: {
         'Accept': 'application/vnd.api+json',
         'Content-Type': 'application/vnd.api+json'
