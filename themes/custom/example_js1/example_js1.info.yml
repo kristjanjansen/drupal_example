@@ -1,0 +1,7 @@
+name: example_js1
+type: theme
+description: example_js1
+package: Other
+core: 8.x
+base theme: false
+
