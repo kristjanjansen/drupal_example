@@ -28,6 +28,7 @@ composer install
 ./vendor/bin/drupal create:comments 1 --limit=3 --title-words=1 --time-range=5
 ./vendor/bin/drupal create:comments 2 --limit=3 --title-words=1 --time-range=5
 ./vendor/bin/drupal create:comments 3 --limit=3 --title-words=1 --time-range=5
+```
 
 # React frontend
 
