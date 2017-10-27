@@ -1,6 +1,4 @@
-![](screenshot.png)
-
-## A modern Drupal 8 development stack
+## A demo project for Drupalcamp Baltics 2017
 
 ### Requirements
 
@@ -31,22 +29,18 @@ composer install
 ./vendor/bin/drupal create:comments 2 --limit=3 --title-words=1 --time-range=5
 ./vendor/bin/drupal create:comments 3 --limit=3 --title-words=1 --time-range=5
 
-# Client
+# React frontend
 
-yarn # or npm install
+```
+npm install
 npm run build
+```
 
-# If you have Valet installed then
+# Running
 
+If you have [Laravel Valet](https://laravel.com/docs/valet) installed then 
+
+```
 valet open
 ```
 
-```sh
-# ./vendor/bin/drupal config:export:single --name=user.role.anonymous --remove-uuid --remove-config-hash --directory="config/sync"
-
-# Downsides
-
-accessibility
-translations / t
-formatters
-```
